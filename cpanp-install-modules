@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+modules=(
+DB
+Tk
+)
+
+for module in "${modules[@]}"
+do
+    perldoc $module 2>&1 > /dev/null
+    if [ $? -ne 1 ]
+    then
+       echo >&2 "Module $module already installed. Skipping" 
+    else
+       cpanp i "$module"
+    fi
+done
