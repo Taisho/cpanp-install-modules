@@ -2,6 +2,7 @@
 
 modules=(
 DB
+Linux::Inotify2
 Tk
 )
 
