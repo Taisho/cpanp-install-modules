@@ -3,12 +3,17 @@
 modules=(
 DB
 Linux::Inotify2
+Moose 
+DBI
+DBD::mysql.pm
+Clone
 Tk
+Tk::ToolBar
 )
 
 for module in "${modules[@]}"
 do
-    perldoc $module 2>&1 > /dev/null
+    perldoc $module &> /dev/null
     if [ $? -ne 1 ]
     then
        echo >&2 "Module $module already installed. Skipping" 
