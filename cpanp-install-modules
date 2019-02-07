@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 modules=(
+Proc::ProcessTable
 DB
 Linux::Inotify2
 Moose 
